@@ -2,7 +2,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import main_routines as mr
-
+#test
 ########### Create plot
 df_all_ita = mr.get_ita_covid_data()
 fig_ita_ctr, df_ita_ctr = mr.plot_cum_infected_ctr_italy(df_all=df_all_ita)
