@@ -122,7 +122,7 @@ def plot_ita_covid_map(df_all):
                          )
 
     fig.update_layout(geo_scope='europe',
-                      title='<b>Italy</b> COVID-19 spreading over time<br>Source: <a href="https://github.com/pcm-dpc/COVID-19">Dipartimento della Protezione Civile</a>')
+                      title='<b>Italy</b> COVID-19 spreading over time (zoom on Italy and press "play" button)<br>Source: <a href="https://github.com/pcm-dpc/COVID-19">Dipartimento della Protezione Civile</a>')
 
     return fig, df_map_plot
 
