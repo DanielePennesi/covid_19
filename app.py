@@ -10,7 +10,7 @@ myheading='Infected Contributions Over Time'
 githublink='https://github.com/DanielePennesi/covid_19'
 code_surce = html.A('Code on Github by Daniele Pennesi', href=githublink)
 ########### Create plots
-ll_html_output = [html.H1(myheading), html.H2('Italy section'), html.H2('Single click on the legend to hide, double click on the lengend to hide the rest')]
+ll_html_output = [html.H1(myheading), html.H2('Italy section'), html.H3('Single click on the legend to hide, double click on the lengend to hide the rest')]
 df_all_ita = mr.get_ita_covid_data()  # retrieving italian data from Dipartimento Protezione Civile
 fig_ita_ctr, df_ita_ctr = mr.plot_cum_infected_ctr_italy(df_all=df_all_ita)  # creating fig of contributions over time
 ll_html_output += [dcc.Graph(id='fig_ita_ctr', figure=fig_ita_ctr), code_surce]
