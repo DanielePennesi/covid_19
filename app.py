@@ -32,7 +32,7 @@ app.layout = html.Div(children=[
         id='fig_ita_map',
         figure=fig_ita_map
     ),
-    html.A('Code on Github', href=githublink),
+    html.A('Code on Github', href=githublink)
 
     ]
 )
