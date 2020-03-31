@@ -19,8 +19,8 @@ def get_ita_covid_data():
     'terapia_intensiva'--> numero cumulato di ATTUALMENTE ricoverati in terapia intensiva
     'totale_ospedalizzati'--> somma tra ATTUALMENTE ricoerati_con_sintomi e ATTUALMENTE in terapia_intensiva
     'isolamento_domiciliare'--> numero cumulato di ATTUALMENTE positivi e ATTUALMENTE non ospedalizzati 
-    'totale_attualmente_positivi'--> somma tra ATTUALMENTE totale_ospedalizzati e isolamento_domiciliare
-    'nuovi_attualmente_positivi'--> differenza tra totale_attualmente_positivi a T e T-1
+    'totale_positivi'--> somma tra ATTUALMENTE totale_ospedalizzati e isolamento_domiciliare
+    'nuovi_positivi'--> differenza tra totale_attualmente_positivi a T e T-1
     'dimessi_guariti'--> numero cumulato di guariti
     'deceduti'--> numero cumulato di deceduti
     'totale_casi'--> somma tra deceduti, dimessi_guariti, totale_attualmente_positivi
@@ -40,7 +40,7 @@ def get_ita_covid_data():
                    'Campania': 5801692,
                    'Sicilia': 4999891,
                    'Veneto': 4905854,
-                   'Emilia Romagna': 4459477,
+                   'Emilia-Romagna': 4459477,
                    'Piemonte': 4356406,
                    'Puglia': 4029053,
                    'Toscana': 3729641,
@@ -64,7 +64,7 @@ def get_ita_covid_data():
                  'Campania': 424,
                  'Sicilia': 194,
                  'Veneto': 267,
-                 'Emilia Romagna': 199,
+                 'Emilia-Romagna': 199,
                  'Piemonte': 172,
                  'Puglia': 206,
                  'Toscana': 162,
@@ -106,7 +106,7 @@ def plot_ita_covid_map(df_all):
     df_all_to_plot = df_all.reset_index()
     df_all_to_plot['data'] = df_all_to_plot['data'].astype('str')
 
-    ll_cols = ['totale_casi', 'deceduti', 'dimessi_guariti', 'totale_attualmente_positivi']
+    ll_cols = ['totale_casi', 'deceduti', 'dimessi_guariti', 'totale_positivi']
 
     df_map_plot = pd.DataFrame()
     for col in ll_cols:
