@@ -118,7 +118,7 @@ def plot_ita_covid_map(df_all):
                          lon=df_map_plot['long'],
                          lat=df_map_plot['lat'],
                          hover_name="denominazione_regione", size="value",
-                         animation_frame="data", size_max=50, width=1000, height=800, color="label"
+                         animation_frame="data", size_max=50, width=1250, height=800, color="label"
                          )
 
     fig.update_layout(geo_scope='europe',
