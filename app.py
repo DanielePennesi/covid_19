@@ -18,7 +18,8 @@ fig_ita_map, df_ita_map = mr.plot_ita_covid_map(df_all=df_all_ita)  # creating f
 ll_html_output += [dcc.Graph(id='fig_ita_map', figure=fig_ita_map), code_surce, html.H2('Italy Regions section (sorted by number of infections)')]
 
 max_data = df_all_ita.index.get_level_values('data').max()
-regions_list = list(df_all_ita.loc[max_data][['totale_casi']].sort_values('totale_casi', ascending=False).index)
+# regions_list = list(df_all_ita.loc[max_data][['totale_casi']].sort_values('totale_casi', ascending=False).index)
+regions_list = ['Marche']
 dict_regions = {}
 for region in regions_list:
     # dict_regions[region] = {}
