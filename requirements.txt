@@ -114,7 +114,7 @@ traitlets==4.3.2
 urllib3==1.25.7
 virtualenv==16.6.0
 virtualenv-clone==0.5.3
-waitress==1.4.2
+waitress==2.1.1
 wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.15.4
